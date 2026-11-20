@@ -1,0 +1,12 @@
+เว็บพร้อม · TEST_MODE=1 · BUG_MODE=[B03]
+BUG_MODE=[B03] · 46 passed · 5 failed · 0 skipped · รวม 51 · 149 s
+ต้องล้ม: TC-SLA-01 · TC-SLA-02 · อาจล้ม: TC-SLA-03 · TC-RBAC-04
+ล้มจริง: TC-SLA-01 · TC-SLA-02 · TC-SLA-03 · TC-NOTI-02 · TC-RBAC-04
+ล้มเกินที่คาด: TC-NOTI-02 · ควรล้มแต่ผ่าน: –
+  ล้มเกินแต่มีกฎรองรับ: TC-NOTI-02 — DECISIONS §18 "B03 กระทบอะไร": ฟังก์ชันวันทำการตัวเดียวใช้ทั้งกำหนดเสร็จและวันคงเหลือ → TC ที่ใช้วันคงเหลือข้ามวันหยุดล้มด้วยได้ (ส่วน B ที่ ส.5 ธ.ค.: …000011/…000016 เหลือ 1 วัน ข้าม จ.7)
+  ✗ TC-SLA-01 [แถว c: SV-01 ชำระ 2026-12-01T16:30:00+07:00] Error: expect(received).toBe(expected) // Object.is equality ⏎ Expected: "2026-12-08T16:30:00+07:00" ⏎ Received: "2026-12-07T16:30:00+07:00"
+  ✗ TC-SLA-02 [ส่วน 1 ตีกลับ 2 ธ.ค. ส่งแก้ 3 ธ.ค. (หยุด 1 วัน)] Error: expect(locator).toHaveAttribute(expected) failed ⏎ Locator:  getByTestId('sla-due') ⏎ Expected: "2026-12-08T16:30:00+07:00" ⏎ Received: "2026-12-07T16:30:00+07:00" ⏎ Timeout:  7000ms
+  ✗ TC-SLA-03 [ส่วน B seed …000016 กำหนด อ. 8 ธ.ค. 16:30 › EG-2569-000016 @ 2026-12-04T09:00:00+07:00 → near] Error: expect(received).toBe(expected) // Object.is equality ⏎ Expected: "near" ⏎ Received: "normal"
+  ✗ TC-NOTI-02 [ส่วน B ข้ามระดับ (request แรกที่ ส. 5 ธ.ค. 10:00)] Error: expect(received).toEqual(expected) // deep equality ⏎ - Expected  - 1 ⏎ + Received  + 0 ⏎ @@ -1,9 +1,8 @@ ⏎ Array [ ⏎ "EG-2569-000013:overdue", ⏎ "EG-2569-000015:overdue", ⏎ -   "EG-2569-000016:near", ⏎ "EG-2569-000024:overdue", ⏎ "EG-2569-000025:overdue", ⏎ "EG-2569-000026:overdue", ⏎ "EG-2569-000027:overdue", ⏎ "EG-2569-000028:overdue",
+  ✗ TC-RBAC-04 [7 NEW_PAID หลังเพิ่มวันหยุด → …000033 กำหนด 8 ธ.ค.] Error: expect(received).toBe(expected) // Object.is equality ⏎ Expected: "2026-12-08T16:30:00+07:00" ⏎ Received: "2026-12-04T16:30:00+07:00"
+ผล: ⚠️ ตรงแผน ยกเว้น TC ที่ล้มเกินซึ่งมีกฎใน brief รองรับ (ดูบรรทัดบน)

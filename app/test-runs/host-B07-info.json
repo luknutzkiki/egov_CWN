@@ -1,0 +1,30 @@
+﻿{
+    "now":  "2026-12-01T09:00:00+07:00",
+    "testMode":  true,
+    "bugs":  [
+                 "B07"
+             ],
+    "routes":  {
+                   "loaded":  [
+                                  "audit-admin.js",
+                                  "auth.js",
+                                  "citizen.js",
+                                  "dashboard.js",
+                                  "documents.js",
+                                  "officer.js"
+                              ],
+                   "failed":  [
+
+                              ]
+               },
+    "hooks":  {
+                  "request":  [
+                                  "auto-cancel@10",
+                                  "sla-notify@50"
+                              ],
+                  "reset":  [
+
+                            ]
+              },
+    "dbPath":  "/app/data/app.db"
+}

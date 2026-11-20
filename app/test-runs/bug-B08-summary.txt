@@ -1,0 +1,6 @@
+BUG_MODE=[B08] · 50 passed · 1 failed · 0 skipped · รวม 51 · 170 s
+ต้องล้ม: TC-QUEUE-02 · อาจล้ม: –
+ล้มจริง: TC-QUEUE-02
+ล้มเกินที่คาด: – · ควรล้มแต่ผ่าน: –
+  ✗ TC-QUEUE-02 [ส่วน 1 พร้อมกัน (UI 2 context)] Error: กดรับเรื่องพร้อมกัน 2 คน: สำเร็จ 1 และได้ ALREADY_CLAIMED 1 ⏎ expect(received).toEqual(expected) // deep equality ⏎ - Expected  - 1 ⏎ + Received  + 1 ⏎ Array [ ⏎ -   "error: มีเจ้าหน้าที่รับเรื่องนี้แล้ว", ⏎ +   "success", ⏎ "success", ⏎ ]
+ผล: ✅ ตรงแผน

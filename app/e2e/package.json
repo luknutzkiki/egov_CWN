@@ -1,0 +1,21 @@
+{
+  "name": "egov-eservice-e2e",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Playwright e2e สำหรับ e-Service เทศบาลนครตัวอย่าง (TEST-PLAN 51 TC)",
+  "scripts": {
+    "fixtures": "node fixtures/make-fixtures.js",
+    "test": "playwright test",
+    "test:list": "playwright test --list",
+    "test:part1": "playwright test tests/part1.spec.ts",
+    "test:part2": "playwright test tests/part2.spec.ts",
+    "install-browsers": "playwright install --with-deps chromium",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,6 @@
+BUG_MODE=[B07] · 50 passed · 1 failed · 0 skipped · รวม 51 · 169 s
+ต้องล้ม: TC-RBAC-02 · อาจล้ม: TC-WORKFLOW-01
+ล้มจริง: TC-RBAC-02
+ล้มเกินที่คาด: – · ควรล้มแต่ผ่าน: –
+  ✗ TC-RBAC-02 [1–3 off.reg2 approve/reject SV-02 ทาง API → 403] Error: http://localhost:3000/api/cases/EG-2569-000014/approve → 200 {"status":"APPROVED"} ⏎ expect(received).toBe(expected) // Object.is equality ⏎ Expected: 403 ⏎ Received: 200
+ผล: ✅ ตรงแผน

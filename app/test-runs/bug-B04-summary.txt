@@ -1,0 +1,6 @@
+BUG_MODE=[B04] · 50 passed · 1 failed · 0 skipped · รวม 51 · 157 s
+ต้องล้ม: TC-SLA-02 · อาจล้ม: –
+ล้มจริง: TC-SLA-02
+ล้มเกินที่คาด: – · ควรล้มแต่ผ่าน: –
+  ✗ TC-SLA-02 [ส่วน 1 ตีกลับ 2 ธ.ค. ส่งแก้ 3 ธ.ค. (หยุด 1 วัน)] Error: expect(locator).toHaveAttribute(expected) failed ⏎ Locator:  getByTestId('sla-due') ⏎ Expected: "2026-12-08T16:30:00+07:00" ⏎ Received: "2026-12-04T16:30:00+07:00" ⏎ Timeout:  7000ms
+ผล: ✅ ตรงแผน

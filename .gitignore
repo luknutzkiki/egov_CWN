@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# runtime data / logs
+app/web/data/*.db
+app/web/data/*.db-*
+*.log
+
+# Playwright outputs
+app/e2e/playwright-report/
+app/e2e/test-results/
+
+# raw test-run artifacts (screenshots/traces; long non-ASCII paths)
+app/test-runs/**/*-artifacts/
+app/test-runs/**/*-html/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.env

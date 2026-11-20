@@ -1,0 +1,7 @@
+เว็บพร้อม · TEST_MODE=1 · BUG_MODE=[B02]
+BUG_MODE=[B02] · 50 passed · 1 failed · 0 skipped · รวม 51 · 172 s
+ต้องล้ม: TC-UPLOAD-01 · อาจล้ม: –
+ล้มจริง: TC-UPLOAD-01
+ล้มเกินที่คาด: – · ควรล้มแต่ผ่าน: –
+  ✗ TC-UPLOAD-01 [ขนาด (หน้าจอ)] Error: size-5242880.pdf (5,242,880 ไบต์ = ขอบ ≤ 5 MB) ต้องถูกรับ: จำนวน file-item ⏎ expect(locator).toHaveCount(expected) failed ⏎ Locator:  getByTestId('file-item') ⏎ Expected: 1 ⏎ Received: 0 ⏎ Timeout:  7000ms
+ผล: ✅ ตรงแผน

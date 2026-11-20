@@ -1,0 +1,110 @@
+/* e-Service กลาง · สไตล์กลาง (responsive 375/768/1280 · คอนทราสต์ผ่าน WCAG AA) */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "Sarabun", "Noto Sans Thai", "Leelawadee UI", Tahoma, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background: #f5f7fa;
+  overflow-wrap: break-word;
+}
+img, svg, canvas, video { max-width: 100%; height: auto; }
+a { color: #0b4f8a; }
+a:hover { color: #083a66; }
+:focus-visible { outline: 3px solid #f0a500; outline-offset: 2px; }
+
+.skip-link { position: absolute; left: -9999px; top: 0; background: #fff; color: #0b4f8a; padding: .5rem 1rem; z-index: 100; }
+.skip-link:focus { left: .5rem; top: .5rem; }
+
+/* หัวหน้าเว็บ */
+.app-header { background: #0b3d6b; color: #fff; }
+.app-header .bar { max-width: 1200px; margin: 0 auto; padding: .5rem 1rem; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; }
+.app-header a { color: #fff; }
+.app-header .brand { font-weight: 700; text-decoration: none; margin-right: auto; }
+.app-header .nav { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem .75rem; }
+.app-header .nav a { text-decoration: none; padding: .25rem .25rem; border-bottom: 2px solid transparent; }
+.app-header .nav a[aria-current="page"], .app-header .nav a:hover { border-bottom-color: #fff; }
+.app-header .userbox { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.app-header .who { font-size: .95rem; }
+.app-header .role { display: inline-block; background: #fff; color: #0b3d6b; border-radius: 999px; padding: 0 .6rem; font-size: .85rem; }
+.app-header .bell { text-decoration: none; }
+.app-header .bell .count { display: inline-block; min-width: 1.5rem; text-align: center; background: #b3261e; color: #fff; border-radius: 999px; padding: 0 .4rem; font-size: .85rem; }
+form.inline { display: inline; margin: 0; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+main:focus { outline: none; }
+h1 { font-size: 1.5rem; margin: .5rem 0 1rem; }
+h2 { font-size: 1.25rem; margin: 1.25rem 0 .5rem; }
+
+.app-footer { max-width: 1200px; margin: 2rem auto 1rem; padding: 0 1rem; color: #4a4a4a; font-size: .85rem; }
+
+/* การ์ด/ฟอร์ม */
+.card { background: #fff; border: 1px solid #d5dbe3; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+.field { margin-bottom: .75rem; }
+label { display: block; font-weight: 600; margin-bottom: .25rem; }
+label.check { display: flex; gap: .5rem; align-items: flex-start; font-weight: 400; }
+input[type="text"], input[type="number"], input[type="password"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+  width: 100%; max-width: 32rem; padding: .5rem .6rem; font: inherit; color: inherit;
+  border: 1px solid #6b7785; border-radius: 6px; background: #fff;
+}
+input[readonly] { background: #eef1f5; }
+input[type="file"] { max-width: 100%; }
+textarea { min-height: 5rem; }
+
+.btn { display: inline-block; font: inherit; padding: .5rem 1rem; border-radius: 6px; border: 1px solid #0b4f8a; background: #0b4f8a; color: #fff; cursor: pointer; text-decoration: none; }
+.btn:hover { background: #083a66; color: #fff; }
+.btn-light { background: #fff; color: #0b3d6b; border-color: #fff; }
+.btn-light:hover { background: #e3ebf4; color: #0b3d6b; }
+.btn-secondary { background: #fff; color: #0b4f8a; }
+.btn-secondary:hover { background: #e3ebf4; color: #083a66; }
+.btn-danger { background: #a1121b; border-color: #a1121b; }
+.btn-danger:hover { background: #7d0e15; }
+.btn[disabled], .btn:disabled { background: #c9ced6; border-color: #c9ced6; color: #3d3d3d; cursor: not-allowed; }
+.actions { display: flex; flex-wrap: wrap; gap: .5rem; margin: .75rem 0; }
+
+/* ข้อความ */
+.flash-area:empty { display: none; }
+.msg { padding: .6rem .8rem; border-radius: 6px; margin: .5rem 0; border: 1px solid transparent; }
+.msg-error { background: #fde8e8; color: #8a0f16; border-color: #f3b8bb; }
+.msg-success { background: #e6f4ea; color: #145c2e; border-color: #a8d5b5; }
+.msg-info { background: #e3ebf4; color: #0b3d6b; border-color: #b7c9de; }
+.error-text { color: #a1121b; font-weight: 600; }
+.muted { color: #4a4a4a; }
+
+/* ป้ายสถานะ/ระดับ (ข้อความ + สี) */
+.badge { display: inline-block; padding: .05rem .55rem; border-radius: 999px; font-size: .9rem; font-weight: 600; border: 1px solid transparent; white-space: nowrap; }
+.st-DRAFT, .st-PENDING_PAYMENT { background: #ececec; color: #333; border-color: #c4c4c4; }
+.st-SUBMITTED { background: #e3ebf4; color: #0b3d6b; border-color: #b7c9de; }
+.st-IN_REVIEW { background: #e8f0fe; color: #1a3e8c; border-color: #b6c8f0; }
+.st-NEED_FIX { background: #fff4d6; color: #6b4300; border-color: #ecd08a; }
+.st-PENDING_APPROVAL { background: #f1e8fb; color: #4e2a84; border-color: #d3bdf0; }
+.st-APPROVED, .st-COMPLETED { background: #e6f4ea; color: #145c2e; border-color: #a8d5b5; }
+.st-REJECTED, .st-CANCELLED { background: #fde8e8; color: #8a0f16; border-color: #f3b8bb; }
+.lv-normal { background: #e6f4ea; color: #145c2e; border-color: #a8d5b5; }
+.lv-near { background: #fff4d6; color: #6b4300; border-color: #ecd08a; }
+.lv-overdue { background: #fde8e8; color: #8a0f16; border-color: #f3b8bb; }
+.lv-paused { background: #ececec; color: #333; border-color: #c4c4c4; }
+.lv-closed { background: #e0e0e0; color: #2b2b2b; border-color: #bdbdbd; }
+
+/* ตาราง: เลื่อนแนวนอนภายในกล่องของตัวเอง (ทั้งหน้าไม่มี scroll แนวนอน) */
+.table-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 1rem; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid #d5dbe3; vertical-align: top; }
+th { background: #eef1f5; font-weight: 600; }
+dl.kv { display: grid; grid-template-columns: minmax(8rem, max-content) 1fr; gap: .25rem 1rem; margin: 0; }
+dl.kv dt { font-weight: 600; }
+dl.kv dd { margin: 0; min-width: 0; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .75rem; }
+.kpi { background: #fff; border: 1px solid #d5dbe3; border-radius: 8px; padding: .75rem; }
+.kpi .value { font-size: 1.6rem; font-weight: 700; }
+ul.timeline { list-style: none; padding: 0; margin: 0; }
+ul.timeline li { border-left: 3px solid #0b4f8a; padding: .25rem 0 .5rem .75rem; margin-left: .25rem; }
+
+@media (max-width: 600px) {
+  .container { padding: .75rem; }
+  h1 { font-size: 1.3rem; }
+  dl.kv { grid-template-columns: 1fr; }
+  .app-header .brand { width: 100%; }
+}

@@ -1,0 +1,7 @@
+เว็บพร้อม · TEST_MODE=1 · BUG_MODE=[B09]
+BUG_MODE=[B09] · 50 passed · 1 failed · 0 skipped · รวม 51 · 167 s
+ต้องล้ม: TC-PDPA-02 · อาจล้ม: –
+ล้มจริง: TC-PDPA-02
+ล้มเกินที่คาด: – · ควรล้มแต่ผ่าน: –
+  ✗ TC-PDPA-02 [off.reg1] Error: off.reg1 GET /api/officer/queue?filter=all ไม่มีเลข 13 หลัก ⏎ expect(received).not.toMatch(expected) ⏎ Expected pattern: not /\d{13}/ ⏎ Received string:      "{\"items\":[{\"caseNo\":\"EG-2569-000020\",\"serviceId\":\"SV-01\",\"applicantName\":\"สมชาย ใจดี\",\"idMasked\":\"X-XXXX-XXXXX-45-6\",\"status\":\"IN_REVIEW\",\"step\":null,\"owner\":\"off.reg1\",\"dueAt\":\"2026-11-30T16:30:00+07:00\",\"slaLevel\":\"overdue\",\"idNo\":\"1101700123456\"},{\"caseNo\":\"EG-2569-000022\",\"serviceId\":\"SV-01\",\"applicantName\":\"สมหญิง รักไทย\",\"idMasked\":\"X-XXXX-XXXXX-65-9\",\"status\":\"IN_RE
+ผล: ✅ ตรงแผน

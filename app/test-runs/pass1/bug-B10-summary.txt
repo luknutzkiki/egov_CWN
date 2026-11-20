@@ -1,0 +1,8 @@
+BUG_MODE=[B10] · 48 passed · 3 failed · 0 skipped · รวม 51 · 184 s
+ต้องล้ม: TC-DASH-02 · อาจล้ม: TC-DASH-01 · TC-DASH-03
+ล้มจริง: TC-DASH-01 · TC-DASH-02 · TC-DASH-03
+ล้มเกินที่คาด: – · ควรล้มแต่ผ่าน: –
+  ✗ TC-DASH-01 [ALL ธ.ค. บนจอและ API] Error: expect(locator).toHaveText(expected) failed ⏎ Locator:  getByTestId('kpi-ontime-pct') ⏎ Expected: "–" ⏎ Received: "0.0%" ⏎ Timeout:  7000ms
+  ✗ TC-DASH-02 [2026-11 ALL] Error: 2026-11 ALL ontimePct ⏎ expect(received).toBe(expected) // Object.is equality ⏎ Expected: 85.7 ⏎ Received: 23.1
+  ✗ TC-DASH-03 [พ.ย. ALL → xlsx] Error: expect(locator).toHaveText(expected) failed ⏎ Locator:  getByTestId('kpi-ontime-pct') ⏎ Expected: "85.7%" ⏎ Received: "23.1%" ⏎ Timeout:  7000ms
+ผล: ✅ ตรงแผน

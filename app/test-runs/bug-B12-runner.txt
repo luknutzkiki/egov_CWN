@@ -1,0 +1,7 @@
+เว็บพร้อม · TEST_MODE=1 · BUG_MODE=[B12]
+BUG_MODE=[B12] · 50 passed · 1 failed · 0 skipped · รวม 51 · 195 s
+ต้องล้ม: TC-WORKFLOW-04 · อาจล้ม: –
+ล้มจริง: TC-WORKFLOW-04
+ล้มเกินที่คาด: – · ควรล้มแต่ผ่าน: –
+  ✗ TC-WORKFLOW-04 [ส่วน A SV-01 …000020 ตีกลับครั้งที่ 1 2 ✓ ครั้งที่ 3 ✗ (จับ B12)] Error: expect(locator).toHaveCount(expected) failed ⏎ Locator:  getByTestId('return-btn') ⏎ Expected: 0 ⏎ Received: 1 ⏎ Timeout:  7000ms
+ผล: ✅ ตรงแผน

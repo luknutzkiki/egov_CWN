@@ -1,0 +1,8 @@
+เว็บพร้อม · TEST_MODE=1 · BUG_MODE=[B11]
+BUG_MODE=[B11] · 49 passed · 2 failed · 0 skipped · รวม 51 · 245 s
+ต้องล้ม: TC-PDPA-03 · TC-AUDIT-01 · อาจล้ม: –
+ล้มจริง: TC-PDPA-03 · TC-AUDIT-01
+ล้มเกินที่คาด: – · ควรล้มแต่ผ่าน: –
+  ✗ TC-PDPA-03 [5 Audit UNMASK 1 แถว (จับ B11)] Error: expect(locator).toHaveText(expected) failed ⏎ Locator:  getByTestId('audit-count') ⏎ Expected: "1" ⏎ Received: "0" ⏎ Timeout:  7000ms
+  ✗ TC-AUDIT-01 [ไม่กรอง: 16 แถว ฟิลด์ครบ เรียงใหม่ → เก่า] Error: expect(locator).toHaveText(expected) failed ⏎ Locator:  getByTestId('audit-count') ⏎ Expected: "16" ⏎ Received: "15" ⏎ Timeout:  7000ms
+ผล: ✅ ตรงแผน

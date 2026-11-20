@@ -1,0 +1,20 @@
+# ใช้: cd web && docker compose up --build
+#   TEST_MODE=1 docker compose up --build              เปิด /api/test/* (ไม่ตั้ง = ปิด → 404)
+#   TEST_MODE=1 BUG_MODE=B03 docker compose up --build  เปิดบั๊กตาม BUGS.md
+# ฐานข้อมูล: ในคอนเทนเนอร์ /app/data/app.db = บนเครื่อง web/data/app.db (TC-NFR-04 อ่านไฟล์นี้)
+services:
+  web:
+    build: .
+    image: egov-eservice-web:latest
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      TEST_MODE: ${TEST_MODE:-}
+      BUG_MODE: ${BUG_MODE:-}
+      DB_PATH: /app/data/app.db
+      BASE_URL: ${BASE_URL:-http://localhost:3000}
+      PORT: "3000"
+      TZ: Asia/Bangkok
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
